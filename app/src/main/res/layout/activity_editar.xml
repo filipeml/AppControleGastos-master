@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:hint="Descricao"
@@ -21,56 +21,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/edtTipo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="Tipo"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/edtData"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNome" />
+        app:layout_constraintTop_toBottomOf="@+id/edtDescricao" />
 
     <EditText
         android:id="@+id/edtData"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:hint="Data"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/edtTipo"
-        app:layout_constraintTop_toBottomOf="@+id/edtNome" />
+        app:layout_constraintTop_toBottomOf="@+id/edtDescricao" />
 
     <EditText
         android:id="@+id/edtValor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="214dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="Valor"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTipo" />
-
 
     <Button
         android:id="@+id/btnSalvar"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#2196F3"
         android:text="Salvar"
         app:layout_constraintEnd_toStartOf="@+id/btnExcluir"
         app:layout_constraintHorizontal_bias="0.0"
@@ -81,8 +83,9 @@
         android:id="@+id/btnExcluir"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTint="#36F4CE"
         android:text="Excluir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtData"
