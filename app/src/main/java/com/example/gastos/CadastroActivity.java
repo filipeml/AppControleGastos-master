@@ -7,6 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+
 public class CadastroActivity extends AppCompatActivity {
 
     EditText edtDescricao;
@@ -25,6 +28,10 @@ public class CadastroActivity extends AppCompatActivity {
         edtData = findViewById( R.id.edtData );
         edtTipo = findViewById( R.id.edtTipo );
         edtValor = findViewById( R.id.edtValor );
+
+        SimpleMaskFormatter smf = new SimpleMaskFormatter("NN/NN/NNNN");
+        MaskTextWatcher mtw = new MaskTextWatcher(edtData, smf);
+        edtData.addTextChangedListener(mtw);
 
         btnSalvar = findViewById( R.id.btnSalvar );
 

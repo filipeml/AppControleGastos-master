@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Aplicativo-Controle de Gastos</string>
+    <string name="salvar">Salvar</string>
+    <string name="visualizar_e_editar_gastos">Visualizar e Editar Gastos</string>
+    <string name="inserir_novo_gasto">Inserir Novo Gasto</string>
+    <string name="excluir">Excluir</string>
+    <string name="atualizar">atualizar</string>
 </resources>

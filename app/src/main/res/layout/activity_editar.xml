@@ -73,7 +73,7 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#2196F3"
-        android:text="Salvar"
+        android:text="@string/atualizar"
         app:layout_constraintEnd_toStartOf="@+id/btnExcluir"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
         android:layout_marginTop="128dp"
         android:layout_marginEnd="72dp"
         android:backgroundTint="#36F4CE"
-        android:text="Excluir"
+        android:text="@string/excluir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtData"
         tools:ignore="MissingConstraints" />

@@ -8,6 +8,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.content.Intent;
 
+import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+
 
 public class EditarActivity extends AppCompatActivity {
 
@@ -31,6 +34,11 @@ public class EditarActivity extends AppCompatActivity {
         edtValor = findViewById(R.id.edtValor);
         btnSalvar = findViewById(R.id.btnSalvar);
         btnExcluir = findViewById(R.id.btnExcluir);
+
+        //adicionando mascara para o campo data
+        SimpleMaskFormatter smf = new SimpleMaskFormatter("NN/NN/NNNN");
+        MaskTextWatcher mtw = new MaskTextWatcher(edtData, smf);
+        edtData.addTextChangedListener(mtw);
 
         Bundle extra = getIntent().getExtras();
 
