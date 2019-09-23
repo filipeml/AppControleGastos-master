@@ -70,8 +70,8 @@ public class Gastos implements Serializable {
 
     @Override
     public String toString() {
-        return "Contas{" +
-                "nome='" + descricao + '\'' +
+        return "Gastos{" +
+                "descricao='" + descricao + '\'' +
                 ", data=" + data +
                 ", tipo='" + tipo + '\'' +
                 ", valor='" + valor + '\'' +
