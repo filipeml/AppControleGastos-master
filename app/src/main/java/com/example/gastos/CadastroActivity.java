@@ -21,34 +21,40 @@ public class CadastroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_cadastro );
+        super.onCreate ( savedInstanceState );
+        setContentView ( R.layout.activity_cadastro );
 
-        edtDescricao= findViewById( R.id.edtDescricao );
-        edtData = findViewById( R.id.edtData );
-        edtTipo = findViewById( R.id.edtTipo );
-        edtValor = findViewById( R.id.edtValor );
+        edtDescricao=findViewById ( R.id.edtDescricao );
+        edtData=findViewById ( R.id.edtData );
+        edtTipo=findViewById ( R.id.edtTipo );
+        edtValor=findViewById ( R.id.edtValor );
 
-        SimpleMaskFormatter smf = new SimpleMaskFormatter("NN/NN/NNNN");
-        MaskTextWatcher mtw = new MaskTextWatcher(edtData, smf);
-        edtData.addTextChangedListener(mtw);
+        SimpleMaskFormatter smf=new SimpleMaskFormatter ( "NN/NN/NNNN" );
+        MaskTextWatcher mtw=new MaskTextWatcher ( edtData , smf );
+        edtData.addTextChangedListener ( mtw );
 
-        btnSalvar = findViewById( R.id.btnSalvar );
+            btnSalvar=findViewById ( R.id.btnSalvar );
 
-        btnSalvar.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DbHelper db = new DbHelper( getBaseContext() );
+            btnSalvar.setOnClickListener ( new View.OnClickListener ( ) {
+                @Override
+                public void onClick(View v) {
+                    DbHelper db=new DbHelper ( getBaseContext ( ) );
 
-                Gastos gasto = null;
-                gasto = new Gastos ( edtDescricao.getText().toString(), edtData.getText().toString(),
-                                    edtTipo.getText().toString(), edtValor.getText().toString() );
+                    Gastos gasto=null;
+                    gasto=new Gastos ( edtDescricao.getText ( ).toString ( ) , edtData.getText ( ).toString ( ) ,
+                            edtTipo.getText ( ).toString ( ) , edtValor.getText ( ).toString ( ) );
 
-                GastosDao gastosDao = new GastosDao ( getBaseContext() );
+                    GastosDao gastosDao=new GastosDao ( getBaseContext ( ) );
 
-                String msg = gastosDao.save( gasto );
-                Toast.makeText( getBaseContext(),msg,Toast.LENGTH_LONG ).show();
-            }
-        });
+                    if (edtValor.getText ( ).toString ( ).trim ( ).equals ( "" ) || edtTipo.getText ( ).toString ( ).trim ( ).equals ( "" ) || edtData.getText ( ).toString ( ).trim ( ).equals ( "" ) || edtDescricao.getText ( ).toString ( ).trim ( ).equals ( "" ) ) {
+                        Toast.makeText ( getApplicationContext ( ) , getString ( R.string.favor_informar_todos_os_campos ) , Toast.LENGTH_LONG ).show ( );
+                    }else{
+                        String msg=gastosDao.save ( gasto );
+                        Toast.makeText ( getBaseContext ( ) , msg , Toast.LENGTH_LONG ).show ( );
+
+                    }
+                }
+            } );
+        }
     }
-}
+

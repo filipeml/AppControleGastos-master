@@ -5,4 +5,5 @@
     <string name="inserir_novo_gasto">Inserir Novo Gasto</string>
     <string name="excluir">Excluir</string>
     <string name="atualizar">atualizar</string>
+    <string name="favor_informar_todos_os_campos">favor informar todos os campos</string>
 </resources>
