@@ -65,9 +65,12 @@ public class EditarActivity extends AppCompatActivity {
 
                 GastosDao gastosDao = new GastosDao ( getBaseContext() );
 
-                String msg = gastosDao.editar( g );
-                Toast.makeText( getBaseContext(),msg,Toast.LENGTH_LONG ).show();
-            }
+                if (edtValor.getText ( ).toString ( ).trim ( ).equals ( "" ) || edtTipo.getText ( ).toString ( ).trim ( ).equals ( "" ) || edtData.getText ( ).toString ( ).trim ( ).equals ( "" ) || edtDescricao.getText ( ).toString ( ).trim ( ).equals ( "" ) ) {
+                    Toast.makeText ( getApplicationContext ( ) , getString ( R.string.favor_informar_todos_os_campos ) , Toast.LENGTH_LONG ).show ( );
+                }else {
+                    String msg=gastosDao.editar ( g );
+                    Toast.makeText ( getBaseContext ( ) , msg , Toast.LENGTH_LONG ).show ( );
+                }    }
         } );
 
         btnExcluir.setOnClickListener( new View.OnClickListener() {
@@ -76,6 +79,8 @@ public class EditarActivity extends AppCompatActivity {
                 DbHelper db = new DbHelper(getBaseContext());
 
                 GastosDao gastosDao = new GastosDao (getBaseContext());
+
+
                 String msg = gastosDao.deletar(g);
                 Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG).show();
             }
