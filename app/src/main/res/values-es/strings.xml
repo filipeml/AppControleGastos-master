@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicacion-Control de Gastos</string>
+    <string name="excluir">Excluir</string>
+    <string name="inserir_novo_gasto">Insetar Nuevo Gasto</string>
+    <string name="salvar">Guardar</string>
+    <string name="visualizar_e_editar_gastos">Ver y Editar Gasto</string>
+    <string name="atualizar">Actualizar</string>
+    <string name="favor_informar_todos_os_campos">por favor ingrese todos los campos</string>
+    <string name="valor">Vale la pena</string>
+    <string name="tipo">Como</string>
+    <string name="descricao">Descripción</string>
+    <string name="data">Fecha</string>
+</resources>

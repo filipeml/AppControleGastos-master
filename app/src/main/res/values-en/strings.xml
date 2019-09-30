@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App-Expense Control</string>
+    <string name="excluir">Delete</string>
+    <string name="inserir_novo_gasto">Insert New Spend</string>
+    <string name="salvar">To Save</string>
+    <string name="visualizar_e_editar_gastos">View and Edit Spend</string>
+    <string name="atualizar">update</string>
+    <string name="favor_informar_todos_os_campos">please enter all fields</string>
+    <string name="valor">Value</string>
+    <string name="tipo">Type</string>
+    <string name="descricao">Description</string>
+    <string name="data">Date</string>
+</resources>
