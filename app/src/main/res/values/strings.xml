@@ -6,4 +6,8 @@
     <string name="excluir">Excluir</string>
     <string name="atualizar">atualizar</string>
     <string name="favor_informar_todos_os_campos">favor informar todos os campos</string>
+    <string name="valor">Valor</string>
+    <string name="tipo">Tipo</string>
+    <string name="descricao">Descricao</string>
+    <string name="data">Data</string>
 </resources>
