@@ -3,7 +3,7 @@
     <string name="app_name">Aplicacion-Control de Gastos</string>
     <string name="excluir">Excluir</string>
     <string name="inserir_novo_gasto">Insetar Nuevo Gasto</string>
-    <string name="salvar">Guardar</string>
+    <string name="salvar">Guarda</string>
     <string name="visualizar_e_editar_gastos">Ver y Editar Gasto</string>
     <string name="atualizar">Actualizar</string>
     <string name="favor_informar_todos_os_campos">por favor ingrese todos los campos</string>
